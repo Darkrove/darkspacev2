@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -77,4 +73,179 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.navbar-blur {
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+}
+
+html {
+  @apply bg-black;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.title-gradient {
+  background: linear-gradient(94.79deg, #e86aff 33.64%, #53afff 68.78%), #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.download-today-shadow-inset {
+  box-shadow: 50px 66px 78px -80px rgba(86, 159, 255, 0.328) inset;
+  border-radius: 15px;
+  background-image: url("/images/stars.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.download-today-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  z-index: -1;
+  padding: 1px;
+  background: linear-gradient(90deg, #54b8f6, #212b56);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.worm-hole-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  z-index: -1;
+  padding: 1px;
+  background: linear-gradient(90deg, transparent, #252535);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.contribute-drop-shadow {
+  filter: drop-shadow(0px 0px 20px #34d3997a);
+  -webkit-filter: drop-shadow(0px 0px 20px #34d3997a);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cloud-card-hover {
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.cloud-card-gradient-bg::after {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #161423 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) opacity;
+  width: 100%;
+}
+
+.news-banner-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  padding: 1px;
+  background: linear-gradient(45deg, #904dff, #eb72ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.absolute-horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.news-banner-glow {
+  filter: drop-shadow(0px 0px 5px #914dff79);
+}
+
+@keyframes left-line-animation-fade {
+  0% {
+    opacity: 0;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 92%;
+  }
+}
+
+@keyframes top-line-animation-fade {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    top: 88%;
+  }
+}
+
+.home-button-border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 7px;
+  background: linear-gradient(20deg, #3c4c860e 30%, #9daadba2);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.bento-radial-gradient-fade {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  background: -moz-radial-gradient(
+    circle,
+    rgba(18, 19, 30, 0) 0%,
+    #03030376 200%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(18, 19, 30, 0) 0%,
+    #03030376 200%
+  );
+  background: radial-gradient(circle, rgba(18, 19, 30, 0) 0%, #03030376 200%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12131e",endColorstr="#15161f",GradientType=1);
 }

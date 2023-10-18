@@ -56,7 +56,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavBar() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-b-stone-200 bg-white dark:border-b-stone-700 dark:bg-stone-900">
+    <header className="navbar-blur fixed z-[55] h-16 w-full !bg-black/10 px-2 transition">
       <div className="h-16 px-5 md:px-10 container max-w-7xl mx-auto w-full flex justify-between items-center">
         <div className="hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">

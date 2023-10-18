@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { NavBar } from "@/components/layout/nav-tabs";
-import Layout from "@/components/layout/layout";
+import { ThemeProvider } from "@/components/app/context/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
-        <Layout>
-          <div>{children}</div>
-        </Layout>
-        <Toaster richColors position="bottom-right" />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <div className="overflow-hidden dark:bg-[#030014]/60">
+            <NavBar />
+            <main className="dark z-10 w-full dark:text-white">{children}</main>
+            {/* <Footer /> */}
+          </div>
+          <Toaster richColors position="bottom-right" />{" "}
+        </ThemeProvider>
       </body>
     </html>
   );
