@@ -46,7 +46,7 @@ export function NavBar() {
         </div>
         <div className="md:hidden flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Icons.logo className="h-6 w-6" />
+            <Icons.logo className="h-7 w-7" />
             <span className="font-bold sm:inline-block">Darkspace</span>
           </Link>
         </div>

@@ -22,7 +22,7 @@ export function Footer() {
       />
       <div className="min-h-64 m-auto grid max-w-[100rem] grid-cols-2 gap-6 p-8 pb-20 pt-10 text-white sm:grid-cols-2 lg:grid-cols-6">
         <div className="col-span-2">
-          <Icons.logo className="mb-5 h-10 w-10" />
+          <Icons.logo className="mb-5 h-12 w-12" />
 
           <h1 className="mb-1 text-xl font-bold">Darkspace</h1>
           <p className="text-sm text-gray-350 opacity-50">
