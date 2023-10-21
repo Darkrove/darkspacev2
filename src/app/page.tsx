@@ -3,6 +3,8 @@ import Layout from "@/components/layout/layout";
 import { Background } from "@/components/app/background/background";
 import CyclingImage from "@/components/app/image/cycling-image";
 import { NewBanner } from "@/components/banner";
+import WormHole from "@/components/worm-hole";
+import LargeHeading from "@/components/ui/large-heading";
 
 export default function Page() {
   return (
@@ -25,9 +27,9 @@ export default function Page() {
           link="Read post"
           className="mt-[50px] lg:mt-0"
         />
-        <h1 className="fade-in-heading z-30 mb-3 bg-clip-text px-2 text-center text-4xl font-bold leading-tight text-white md:text-5xl lg:text-7xl">
+        <LargeHeading className="mb-3 bg-clip-text px-2 text-center font-bold text-white">
           Securely Store and Share Your Videos and Images on the Blockchain.
-        </h1>
+        </LargeHeading>
         <p className="animation-delay-1 fade-in-heading text-md leading-2 z-30 mb-8 mt-1 max-w-4xl text-center text-gray-450 lg:text-lg lg:leading-8">
           Dive and Experience the power of decentralization and never worry
           about your stuff being lost or snooped.
@@ -83,7 +85,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        {/* <WormHole /> */}
+        <WormHole />
         {/* <BentoBoxes /> */}
         {/* <CloudStorage /> */}
         {/* <DownloadToday isWindows={deviceOs?.isWindows} /> */}
