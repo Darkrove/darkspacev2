@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 import { NavBar } from "@/components/layout/nav-tabs";
 import { ThemeProvider } from "@/components/app/context/theme-provider";
+import { Footer } from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
           <div className="overflow-hidden dark:bg-[#030014]/60">
             <NavBar />
             <main className="dark z-10 w-full dark:text-white">{children}</main>
-            {/* <Footer /> */}
+            <Footer />
           </div>
           <Toaster richColors position="bottom-right" />{" "}
         </ThemeProvider>
