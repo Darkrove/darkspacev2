@@ -59,6 +59,10 @@ export function NavBar() {
           </Button>
         </div>
       </div>
+      <div className="absolute bottom-0 flex h-1 w-full flex-row items-center justify-center pt-4 opacity-100">
+        <div className="h-[1px] w-1/2 bg-gradient-to-r from-transparent to-white/10"></div>
+        <div className="h-[1px] w-1/2 bg-gradient-to-l from-transparent to-white/10"></div>
+      </div>
     </header>
   );
 }
