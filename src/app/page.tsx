@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import { Icons } from "@/components/shared/icons/index";
 import Layout from "@/components/layout/layout";
 import { Background } from "@/components/app/background/background";
 import CyclingImage from "@/components/app/image/cycling-image";
