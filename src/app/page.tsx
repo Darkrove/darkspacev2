@@ -30,7 +30,7 @@ export default function Page() {
         <LargeHeading className="mb-3 bg-clip-text px-2 text-center font-bold text-white">
           Securely Store and Share Your Videos and Images on the Blockchain.
         </LargeHeading>
-        <p className="animation-delay-1 fade-in-heading text-md leading-2 z-30 mb-8 mt-1 max-w-4xl text-center text-gray-450 lg:text-lg lg:leading-8">
+        <p className="animation-delay-1 fade-in-heading text-md leading-2 z-30 mb-8 mt-1 max-w-4xl text-center text-gray-400 lg:text-lg lg:leading-8">
           Dive and Experience the power of decentralization and never worry
           about your stuff being lost or snooped.
           <br />
