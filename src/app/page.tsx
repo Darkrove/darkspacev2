@@ -9,6 +9,7 @@ import WormHole from "@/components/worm-hole";
 import LargeHeading from "@/components/ui/large-heading";
 import HomeCTA from "@/components/home-cta";
 import BentoBoxes from "@/components/bento-boxes";
+import { Stats } from "@/components/stats";
 
 export default function Page() {
   return (
@@ -98,7 +99,7 @@ export default function Page() {
         </div>
         <BentoBoxes />
         <WormHole />
-        {/* <CloudStorage /> */}
+        <Stats />
         {/* <DownloadToday isWindows={deviceOs?.isWindows} /> */}
         {/* <div className="h-[100px] sm:h-[200px] w-full" /> */}
       </div>
