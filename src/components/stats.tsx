@@ -29,7 +29,7 @@ export async function Stats() {
       </LargeHeading>
 
       <div className="flex justify-center items-center gap-2">
-        <div className="home-button-border-gradient max-w-fit relative z-30 flex cursor-pointer items-center justify-center gap-2 !rounded-[7px] border-0 !bg-[#2F3152]/30 py-2 text-sm text-white !backdrop-blur-lg hover:brightness-110 px-3">
+        <div className="home-button-border-gradient max-w-fit relative z-30 flex items-center justify-center gap-2 !rounded-[7px] border-0 !bg-[#2F3152]/30 py-2 text-sm text-white !backdrop-blur-lg hover:brightness-110 px-3">
           <Eye className="h-5 w-5" />
           <p className="font-bold">{pageviews} VIEWS</p>
         </div>
