@@ -23,17 +23,15 @@ export async function Stats() {
   const pageviewDigits = pageviews.toString().split("");
 
   return (
-    <div className="z-40 w-full p-2 rounded-[20px] bg-gradient-to-r from-[#904dff] to-[#eb72ff]">
-      <div className="p-8 h-full w-full bg-[#030014] rounded-xl">
-        <LargeHeading className="mb-5">
-          Total views on this website so far
-        </LargeHeading>
+    <div className="text-whitez-40 w-full rounded-[20px] p-10 border-gradient-effect news-banner-glow">
+      <LargeHeading className="mb-5 text-white">
+        Total views on this website so far
+      </LargeHeading>
 
-        <div className="flex justify-center items-center gap-2">
-          <div className="home-button-border-gradient max-w-fit relative z-30 flex cursor-pointer items-center justify-center gap-2 !rounded-[7px] border-0 !bg-[#2F3152]/30 py-2 text-sm text-white !backdrop-blur-lg hover:brightness-110 px-3">
-            <Eye className="h-5 w-5" />
-            <p className="font-bold">{pageviews} VIEWS</p>
-          </div>
+      <div className="flex justify-center items-center gap-2">
+        <div className="home-button-border-gradient max-w-fit relative z-30 flex cursor-pointer items-center justify-center gap-2 !rounded-[7px] border-0 !bg-[#2F3152]/30 py-2 text-sm text-white !backdrop-blur-lg hover:brightness-110 px-3">
+          <Eye className="h-5 w-5" />
+          <p className="font-bold">{pageviews} VIEWS</p>
         </div>
       </div>
     </div>
