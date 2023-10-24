@@ -32,7 +32,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="overflow-hidden dark:bg-[#030014]/60">
             <NavBar />
-            <main className="dark z-10 w-full dark:text-white">{children}</main>
+            <main className="dark z-10 w-full dark:text-white pb-10">
+              {children}
+            </main>
             <Footer />
           </div>
           <Toaster richColors position="bottom-right" />{" "}

@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="relative z-50 w-screen overflow-hidden pt-10 backdrop-blur"
+      className="relative z-50 w-screen overflow-hidden pt-3 backdrop-blur"
     >
       <Image
         alt="footer gradient"
