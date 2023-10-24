@@ -1,5 +1,3 @@
-"use client";
-
 import { cva, cx, VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 import { ComponentProps, forwardRef } from "react";
