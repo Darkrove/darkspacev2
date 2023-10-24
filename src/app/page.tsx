@@ -97,8 +97,8 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <BentoBoxes />
         <WormHole />
+        <BentoBoxes />
         <Stats />
         {/* <DownloadToday isWindows={deviceOs?.isWindows} /> */}
         {/* <div className="h-[100px] sm:h-[200px] w-full" /> */}

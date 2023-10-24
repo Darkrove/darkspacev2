@@ -6,10 +6,14 @@ interface Props {}
 
 const WormHole = () => {
   return (
-    <div className="pb-10 z-40">
-      <LargeHeading className="mb-5">Powered by web3 technologies</LargeHeading>
-      <div className="mt-1 flex justify-center gap-2 overflow-x-auto">
-        <Logos />
+    <div className="z-40 w-full p-2 rounded-[20px] bg-gradient-to-r from-[#904dff] to-[#729cff]">
+      <div className="p-8 h-full w-full bg-[#030014] rounded-xl">
+        <LargeHeading className="mb-5">
+          Powered by web3 technologies
+        </LargeHeading>
+        <div className="mt-1 flex justify-center gap-2 overflow-x-auto">
+          <Logos />
+        </div>
       </div>
     </div>
   );
