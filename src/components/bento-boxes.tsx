@@ -7,7 +7,7 @@ interface Props {}
 
 const BentoBoxes = () => {
   return (
-    <div className="z-40  w-full p-10">
+    <div className="z-40  w-full py-10 md:p-10">
       <LargeHeading className="mb-5">
         Own your data for the first time
       </LargeHeading>
