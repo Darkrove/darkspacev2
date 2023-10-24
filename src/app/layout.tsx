@@ -20,6 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          defer
+          data-website-id="96a61cba-83cb-4307-9abe-ca5f3ee64129"
+          src="https://umami-darkspace.vercel.app/umami.js"
+        ></script>
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="overflow-hidden dark:bg-[#030014]/60">
