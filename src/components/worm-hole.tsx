@@ -7,7 +7,7 @@ interface Props {}
 const WormHole = () => {
   return (
     <div className="pb-10 z-40">
-      <LargeHeading className="mb-3">Powered by web3 technologies</LargeHeading>
+      <LargeHeading className="mb-5">Powered by web3 technologies</LargeHeading>
       <div className="mt-1 flex justify-center gap-2 overflow-x-auto">
         <Logos />
       </div>
