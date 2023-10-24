@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import LargeHeading from "./ui/large-heading";
+import LargeHeading from "@/components/ui/large-heading";
 import Image from "next/image";
 
 interface Props {}

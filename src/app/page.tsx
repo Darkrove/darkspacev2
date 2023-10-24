@@ -8,6 +8,7 @@ import { NewBanner } from "@/components/banner";
 import WormHole from "@/components/worm-hole";
 import LargeHeading from "@/components/ui/large-heading";
 import HomeCTA from "@/components/home-cta";
+import BentoBoxes from "@/components/bento-boxes";
 
 export default function Page() {
   return (
@@ -95,8 +96,8 @@ export default function Page() {
             </div>
           </div>
         </div>
+        <BentoBoxes />
         <WormHole />
-        {/* <BentoBoxes /> */}
         {/* <CloudStorage /> */}
         {/* <DownloadToday isWindows={deviceOs?.isWindows} /> */}
         {/* <div className="h-[100px] sm:h-[200px] w-full" /> */}
