@@ -44,25 +44,132 @@ type IconProps = React.HTMLAttributes<SVGElement>;
 export const Icons = {
   logo: (props: LucideProps) => (
     <svg
-      width="170"
-      height="170"
-      viewBox="0 0 170 170"
+      width="180"
+      height="153"
+      viewBox="0 0 180 153"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <g filter="url(#filter0_i_401_17)">
+        <path
+          d="M90.5 0L179 153H2L90.5 0Z"
+          fill="#904DFF"
+          fill-opacity="0.07"
+        />
+      </g>
       <path
-        d="M84.9423 11.0001L162.885 146H7L84.9423 11.0001Z"
-        fill="#8B5CF6"
+        d="M2.86684 152.5L90.5 0.998595L178.133 152.5H2.86684Z"
+        stroke="url(#paint0_linear_401_17)"
       />
+      <path d="M90.5 49L139 133H42L90.5 49Z" fill="#8B5CF6" />
+      <g filter="url(#filter1_i_401_17)">
+        <path
+          d="M90.5 0L179 153H2L90.5 0Z"
+          fill="#904DFF"
+          fill-opacity="0.07"
+        />
+      </g>
       <path
-        d="M70.618 35.8649L84.9423 11L162.78 145.865L135.483 145.865L70.618 35.8649Z"
-        fill="white"
+        d="M2.86684 152.5L90.5 0.998595L178.133 152.5H2.86684Z"
+        stroke="url(#paint1_linear_401_17)"
       />
-      <path
-        d="M56.2936 60.8492L70.5053 35.9844L135.483 145.984L107.104 145.984L56.2936 60.8492Z"
-        fill="#1BE955"
-      />
+      <defs>
+        <filter
+          id="filter0_i_401_17"
+          x="2"
+          y="0"
+          width="177"
+          height="153"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation="7.5" />
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.564706 0 0 0 0 0.301961 0 0 0 0 1 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="shape"
+            result="effect1_innerShadow_401_17"
+          />
+        </filter>
+        <filter
+          id="filter1_i_401_17"
+          x="2"
+          y="0"
+          width="177"
+          height="153"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation="7.5" />
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.564706 0 0 0 0 0.301961 0 0 0 0 1 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="shape"
+            result="effect1_innerShadow_401_17"
+          />
+        </filter>
+        <linearGradient
+          id="paint0_linear_401_17"
+          x1="90.5"
+          y1="0"
+          x2="90.5"
+          y2="153"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#904DFF" stop-opacity="0.1" />
+          <stop offset="1" stop-opacity="0" />
+          <stop offset="1" stop-color="#904DFF" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_401_17"
+          x1="90.5"
+          y1="0"
+          x2="90.5"
+          y2="153"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#904DFF" stop-opacity="0.1" />
+          <stop offset="1" stop-opacity="0" />
+          <stop offset="1" stop-color="#904DFF" stop-opacity="0" />
+        </linearGradient>
+      </defs>
     </svg>
   ),
   close: X,
