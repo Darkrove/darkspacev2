@@ -37,3 +37,25 @@ export function hasWebGLContext(): boolean {
         ctx.getParameter(ctx.VERSION) !== null
     );
 }
+
+export const formatBytes = (bytes: number, decimals: number = 2): string => {
+  if (!+bytes) return "0 Bytes";
+
+  const k = 1024;
+  const dm = decimals < 0 ? 0 : decimals;
+  const sizes: string[] = [
+    "Bytes",
+    "KB",
+    "MB",
+    "GB",
+    "TB",
+    "PB",
+    "EB",
+    "ZB",
+    "YB",
+  ];
+
+  const i: number = Math.floor(Math.log(bytes) / Math.log(k));
+
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+};
