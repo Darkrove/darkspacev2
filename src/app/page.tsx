@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import { Icons } from "@/components/shared/icons/index";
 import Layout from "@/components/layout/layout";
 import { Background } from "@/components/app/background/background";
@@ -7,6 +7,7 @@ import CyclingImage from "@/components/app/image/cycling-image";
 import { NewBanner } from "@/components/banner";
 import WormHole from "@/components/worm-hole";
 import LargeHeading from "@/components/ui/large-heading";
+import HomeCTA from "@/components/home-cta";
 
 export default function Page() {
   return (
@@ -41,14 +42,13 @@ export default function Page() {
           </span>
         </p>
         {/* <Downloads /> */}
-	      <Link target='_blank' href="https://www.github.com/darkrove/darkspacev2" className="home-button-border-gradient relative z-30 flex cursor-pointer items-center gap-2 !rounded-[7px] border-0 !bg-[#2F3152]/30 py-2 px-3 text-sm text-white !backdrop-blur-lg hover:brightness-110 md:text-[16px]">
-            <span className="flex items-center justify-center space-x-2">
-             <Icons.gitHub className="h-4 w-4" />
-		    
-		    <span>Star on GitHub</span>
-              
-            </span>
-          </Link>
+        <HomeCTA
+          target="_blank"
+          href="https://www.github.com/darkrove/darkspacev2"
+          icon={<Icons.gitHub className="h-5 w-5" />}
+          className="z-5 relative"
+          text="Star on GitHub"
+        />
         <div className="pb-6 xs:pb-24">
           <div
             className="xl2:relative z-30 flex h-[255px] w-full px-6

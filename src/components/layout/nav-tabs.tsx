@@ -14,7 +14,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, buttonStyles } from "@/components/ui/button";
+import HomeCTA from "@/components/home-cta";
 
 export function NavBar() {
   return (
@@ -51,12 +52,13 @@ export function NavBar() {
           </Link>
         </div>
         <div>
-          <Button className="home-button-border-gradient relative z-30 flex cursor-pointer items-center gap-2 !rounded-[7px] border-0 !bg-[#2F3152]/30 py-2 text-sm text-white !backdrop-blur-lg hover:brightness-110 md:text-[16px]">
-            <span className="flex items-center justify-center space-x-2">
-              <span>Login</span>
-              <Icons.arrowRight className="h-4 w-4" />
-            </span>
-          </Button>
+          <HomeCTA
+            size="sm"
+            href="/login"
+            icon={<Icons.arrowRight className="h-4 w-4" />}
+            className="z-5 relative"
+            text="Login"
+          />
         </div>
       </div>
       <div className="absolute bottom-0 flex h-1 w-full flex-row items-center justify-center pt-4 opacity-100">

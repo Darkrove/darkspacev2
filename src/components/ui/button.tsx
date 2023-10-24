@@ -1,56 +1,119 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+"use client";
 
-import { cn } from "@/lib/utils"
+import { cva, cx, VariantProps } from "class-variance-authority";
+import clsx from "clsx";
+import { ComponentProps, forwardRef } from "react";
+import Link from "next/link";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+export interface ButtonBaseProps extends VariantProps<typeof buttonStyles> {}
+
+export type ButtonProps = ButtonBaseProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    href?: undefined;
+  };
+
+export type LinkButtonProps = ButtonBaseProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    href?: string;
+  };
+
+type Button = {
+  (props: ButtonProps): JSX.Element;
+  (props: LinkButtonProps): JSX.Element;
+};
+
+const hasHref = (
+  props: ButtonProps | LinkButtonProps
+): props is LinkButtonProps => "href" in props;
+
+export const buttonStyles = cva(
+  [
+    "cursor-default items-center rounded-md border outline-none transition-colors duration-100",
+    "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-70",
+    "focus:ring-none focus:ring-offset-none cursor-pointer ring-offset-app-box",
+  ],
   {
     variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        icon: "!p-1",
+        lg: "h-11 text-md px-8 py-2 font-medium",
+        md: "px-4 py-2 text-sm font-medium",
+        sm: "px-3 py-2 h-9 text-sm font-medium",
+      },
+      variant: {
+        default: [
+          "bg-transparent hover:bg-app-hover active:bg-app-selected",
+          "border-transparent hover:border-app-line active:border-app-line",
+        ],
+        subtle: [
+          "border-transparent hover:border-app-line/50 active:border-app-line active:bg-app-box/30",
+        ],
+        outline: [
+          "border-sidebar-line/60 hover:border-sidebar-line active:border-sidebar-line/30",
+        ],
+        dotted: [
+          `rounded border border-dashed border-sidebar-line/70 text-center text-xs font-medium text-ink-faint transition hover:border-sidebar-line hover:bg-sidebar-selected/5`,
+        ],
+        gray: [
+          "bg-app-button hover:bg-app-hover focus:bg-app-selected",
+          "border-app-line hover:border-app-line focus:ring-1 focus:ring-accent",
+        ],
+        accent: [
+          "border border-accent bg-accent text-white shadow-md shadow-app-shade/10 hover:bg-accent-faint focus:outline-none",
+          "focus:ring-1 focus:ring-accent focus:ring-offset-2 focus:ring-offset-app-selected",
+        ],
+        colored: [
+          "text-white shadow-sm hover:bg-opacity-90 active:bg-opacity-100",
+        ],
+        bare: "",
       },
     },
     defaultVariants: {
+      size: "sm",
       variant: "default",
-      size: "default",
     },
   }
-)
+);
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-}
+export const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps | LinkButtonProps
+>(({ className, ...props }, ref) => {
+  className = cx(buttonStyles(props), className);
+  return hasHref(props) ? (
+    <a
+      {...props}
+      ref={ref as any}
+      className={cx(className, "inline-block no-underline")}
+    />
+  ) : (
+    <button
+      type="button"
+      {...(props as ButtonProps)}
+      ref={ref as any}
+      className={className}
+    />
+  );
+});
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
-    return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
-)
-Button.displayName = "Button"
-
-export { Button, buttonVariants }
+export const ButtonLink = forwardRef<
+  HTMLAnchorElement,
+  ButtonBaseProps & ComponentProps<typeof Link>
+>(({ className, size, variant, ...props }, ref) => {
+  return (
+    <Link
+      ref={ref}
+      className={buttonStyles({
+        size,
+        variant,
+        className: clsx(
+          "no-underline disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        ),
+      })}
+      {...props}
+    />
+  );
+});
+Button.displayName = "Button";
+ButtonLink.displayName = "ButtonLink";
