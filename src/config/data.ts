@@ -50,6 +50,9 @@ export const team = [
       github: "https://github.com/Darkrove",
     },
   },
+];
+
+export const investors = [
   {
     name: "Boom Lee",
     title: "Web Dev",
@@ -59,5 +62,3 @@ export const team = [
     },
   },
 ];
-
-export const investors = [];
