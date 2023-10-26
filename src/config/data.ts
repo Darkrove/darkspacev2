@@ -39,3 +39,25 @@ export const features = [
     icon: Globe2,
   },
 ];
+
+export const team = [
+  {
+    name: "Sajjad Shaikh",
+    title: "Founder, Web Dev",
+    imageUrl: "https://avatars.githubusercontent.com/u/53792139?v=4",
+    socials: {
+      twitter: "https://twitter.com/sajjads72619701",
+      github: "https://github.com/Darkrove",
+    },
+  },
+  {
+    name: "Boom Lee",
+    title: "Web Dev",
+    imageUrl: "https://avatars.githubusercontent.com/u/149033595?v=4",
+    socials: {
+      github: "https://github.com/sajjad1222",
+    },
+  },
+];
+
+export const investors = [];
