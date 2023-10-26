@@ -71,7 +71,7 @@ const Code = () => (
               <span className="token punctuation">&quot;</span>page not found
               <span className="token punctuation">&quot;</span>
             </span>
-            <span className="token punctuation">&gt;</span>
+            <span className="token punctuation">/&gt;</span>
           </span>
           <br />
           <span className="token tag">

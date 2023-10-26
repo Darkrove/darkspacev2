@@ -312,3 +312,15 @@ html {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+.tag {
+  @apply text-blue-400;
+}
+.punctuation {
+  @apply text-gray-400;
+}
+.attr-name {
+  @apply text-amber-400;
+}
+.attr-value {
+  @apply text-pink-400;
+}
