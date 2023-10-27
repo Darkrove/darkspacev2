@@ -54,7 +54,7 @@ export const team = [
 
 export const investors = [
   {
-    name: "Boom Lee",
+    name: "Boon Lee",
     title: "Web Dev",
     imageUrl: "https://avatars.githubusercontent.com/u/149033595?v=4",
     socials: {
