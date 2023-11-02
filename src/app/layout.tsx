@@ -31,6 +31,7 @@ export default function RootLayout({
           data-website-id="96a61cba-83cb-4307-9abe-ca5f3ee64129"
           src="https://umami-darkspace.vercel.app/umami.js"
         ></script>
+        <script async src="https://feedbacks.vercel.app/widget.js data-widget-id=65430d066f52ef5b065f"></script>
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
